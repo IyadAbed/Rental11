@@ -3,6 +3,8 @@ import Helmet from "../components/Helmet/Helmet";
 import CarItem from "../components/UI/CarItem";
 import carData from "../assets/data/carData";
 import { useState } from "react";
+import CarProvider from "../components/UI/CarProvider";
+import CarRental from "../components/UI/CarRental";
 
 const Provider = () => {
   const defult = () => {
@@ -27,7 +29,7 @@ const Provider = () => {
               </div>
 
               {carData.map((item) => (
-                <CarItem item={item} key={item.id} />
+                <CarProvider item={item} key={item.id} />
               ))}
             </div>
           </div>
@@ -57,7 +59,7 @@ const Provider = () => {
             </div>
 
             {carData.map((item) => (
-              <CarItem item={item} key={item.id} />
+              <CarProvider item={item} key={item.id} />
             ))}
           </div>
         </div>
@@ -195,44 +197,17 @@ const Provider = () => {
 
   const rentalCar = ()=>{
     setElementToDisplay(
-              <Helmet title="Cars">
-      <div className="d-flex flex-row">
-        <div className="col">
-          <div className="col-lg-4">
-            <div className="d-flex align-items-center gap-3 mb-5">
-              <span className="d-flex align-items-center gap-2">
-                <i className="ri-sort-asc"></i> Sort By
-              </span>
-
-              <select>
-                <option>Select</option>
-                <option value="low">Low to High</option>
-                <option value="high">High to Low</option>
-              </select>
-            </div>
-          </div>
+    <Helmet title="Cars">
+      <div className="d-flex justify-content-evenly">
+        <div className="d-flex flex-column align-items-center">
 
           {carData.map((item) => (
-            <CarItem item={item} key={item.id} />
+            <CarRental item={item} key={item.id} />
           ))}
         </div>
-        <div className="col">
-          <div className="col-lg-4">
-            <div className="d-flex align-items-center gap-3 mb-5">
-              <span className="d-flex align-items-center gap-2">
-                <i className="ri-sort-asc"></i> Sort By
-              </span>
-
-              <select>
-                <option>Select</option>
-                <option value="low">Low to High</option>
-                <option value="high">High to Low</option>
-              </select>
-            </div>
-          </div>
-
+        <div className="d-flex flex-column align-items-center">
           {carData.map((item) => (
-            <CarItem item={item} key={item.id} />
+            <CarRental item={item} key={item.id} />
           ))}
         </div>
       </div>
