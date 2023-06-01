@@ -1,5 +1,4 @@
 import React from "react";
-import { Container, Row, Col } from "reactstrap";
 import "../../styles/about-section.css";
 import aboutImg from "../../assets/all-images/cars-img/bmw-offer.png";
 
@@ -13,9 +12,9 @@ const AboutSection = ({ aboutClass }) => {
           : { marginTop: "280px" }
       }
     >
-      <Container>
-        <Row>
-          <Col lg="6" md="6">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-6 col-md-6">
             <div className="about__section-content">
               <h4 className="section__subtitle">About Us</h4>
               <h2 className="section__title">Welcome to car rent service</h2>
@@ -30,37 +29,37 @@ const AboutSection = ({ aboutClass }) => {
 
               <div className="about__section-item d-flex align-items-center">
                 <p className="section__description d-flex align-items-center gap-2">
-                  <i class="ri-checkbox-circle-line"></i> Lorem ipsum dolor sit
+                  <i className="ri-checkbox-circle-line"></i> Lorem ipsum dolor sit
                   amet.
                 </p>
 
                 <p className="section__description d-flex align-items-center gap-2">
-                  <i class="ri-checkbox-circle-line"></i> Lorem ipsum dolor sit
+                  <i className="ri-checkbox-circle-line"></i> Lorem ipsum dolor sit
                   amet.
                 </p>
               </div>
 
               <div className="about__section-item d-flex align-items-center">
                 <p className="section__description d-flex align-items-center gap-2">
-                  <i class="ri-checkbox-circle-line"></i> Lorem ipsum dolor sit
+                  <i className="ri-checkbox-circle-line"></i> Lorem ipsum dolor sit
                   amet.
                 </p>
 
                 <p className="section__description d-flex align-items-center gap-2">
-                  <i class="ri-checkbox-circle-line"></i> Lorem ipsum dolor sit
+                  <i className="ri-checkbox-circle-line"></i> Lorem ipsum dolor sit
                   amet.
                 </p>
               </div>
             </div>
-          </Col>
+          </div>
 
-          <Col lg="6" md="6">
+          <div className="col-lg-6 col-md-6">
             <div className="about__img">
               <img src={aboutImg} alt="" className="w-100" />
             </div>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
